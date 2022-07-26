@@ -26,15 +26,15 @@ class RadioTest {
         assertEquals(expected, radio.getCurrentStationNumber());
     }
 
-    @Test
-    public void shouldFailStationNext() {
-        Radio radio = new Radio();
-        radio.setCurrentStationNumber(9);
-        radio.setNext(true);
-        radio.stationNext();
-        int expected = 10;
-        assertEquals(expected, radio.getCurrentStationNumber());
-    }
+//    @Test
+//    public void shouldFailStationNext() {
+//        Radio radio = new Radio();
+//        radio.setCurrentStationNumber(9);
+//        radio.setNext(true);
+//        radio.stationNext();
+//        int expected = 10;
+//        assertEquals(expected, radio.getCurrentStationNumber());
+//    }
 
     @Test
     public void ShoulduStationPrevFromZeroToNine() {
@@ -56,15 +56,15 @@ class RadioTest {
         assertEquals(expected, radio.getCurrentStationNumber());
     }
 
-    @Test
-    public void ShouldFailStationPrev() {
-        Radio radio = new Radio();
-        radio.setCurrentStationNumber(0);
-        radio.setPrev(true);
-        radio.stationPrev();
-        int expected = 1;
-        assertEquals(expected, radio.getCurrentStationNumber());
-    }
+//    @Test
+//    public void ShouldFailStationPrev() {
+//        Radio radio = new Radio();
+//        radio.setCurrentStationNumber(0);
+//        radio.setPrev(true);
+//        radio.stationPrev();
+//        int expected = 1;
+//        assertEquals(expected, radio.getCurrentStationNumber());
+//    }
 
     @Test
     public void shouldChangeSoundVolumeUpByOne() {
@@ -86,15 +86,15 @@ class RadioTest {
         assertEquals(expected, radio.getCurrentSoundVolume());
     }
 
-    @Test
-    public void shouldFailChangeSoundVolumeUp() {
-        Radio radio = new Radio();
-        radio.setCurrentSoundVolume(0);
-        radio.setSoundLouder(true);
-        radio.changeSoundVolumeUp();
-        int expected = 10;
-        assertEquals(expected, radio.getCurrentSoundVolume());
-    }
+//    @Test
+//    public void shouldFailChangeSoundVolumeUp() {
+//        Radio radio = new Radio();
+//        radio.setCurrentSoundVolume(0);
+//        radio.setSoundLouder(true);
+//        radio.changeSoundVolumeUp();
+//        int expected = 10;
+//        assertEquals(expected, radio.getCurrentSoundVolume());
+//    }
 
     @Test
     public void shouldChangeSoundVolumeDownByOne() {
@@ -116,14 +116,14 @@ class RadioTest {
         assertEquals(expected, radio.getCurrentSoundVolume());
     }
 
-    @Test
-    public void shouldFailChangeSoundVolumeDown() {
-        Radio radio = new Radio();
-        radio.setCurrentSoundVolume(10);
-        radio.setSoundLower(true);
-        radio.changeSoundVolumeDown();
-        int expected = 0;
-        assertEquals(expected, radio.getCurrentSoundVolume());
-    }
+//    @Test
+//    public void shouldFailChangeSoundVolumeDown() {
+//        Radio radio = new Radio();
+//        radio.setCurrentSoundVolume(10);
+//        radio.setSoundLower(true);
+//        radio.changeSoundVolumeDown();
+//        int expected = 0;
+//        assertEquals(expected, radio.getCurrentSoundVolume());
+//    }
 }
 
