@@ -1,12 +1,29 @@
 package ru.netology;
 
 public class Radio {
+    private int stationsQuantity = 10;
     private int currentStationNumber;
     private int currentSoundVolume;
     boolean next;
     boolean prev;
     boolean soundLower;
     boolean soundLouder;
+
+    public Radio() {
+    }
+
+    public Radio(int stationsQuantity) {
+        this.stationsQuantity = stationsQuantity;
+    }
+
+
+    public int getStationsQuantity() {
+        return stationsQuantity;
+    }
+
+    public void setStationsQuantity(int stationsQuantity) {
+        this.stationsQuantity = stationsQuantity;
+    }
 
     public boolean isSoundLower() {
         return soundLower;
@@ -48,7 +65,7 @@ public class Radio {
         if (currentSoundVolume < 0) {
             return;
         }
-        if (currentSoundVolume > 10) {
+        if (currentSoundVolume > 100) {
             return;
         }
         this.currentSoundVolume = currentSoundVolume;
@@ -62,7 +79,7 @@ public class Radio {
         if (currentStationNumber < 0) {
             return;
         }
-        if (currentStationNumber > 9) {
+        if (currentStationNumber > stationsQuantity) {
             return;
         }
         this.currentStationNumber = currentStationNumber;
@@ -70,7 +87,7 @@ public class Radio {
 
     public void stationNext() {
         if (this.next) {
-            if (this.currentStationNumber == 9) {
+            if (this.currentStationNumber == stationsQuantity) {
                 this.currentStationNumber = 0;
             } else {
                 this.currentStationNumber += 1;
@@ -81,7 +98,7 @@ public class Radio {
     public void stationPrev() {
         if (this.prev) {
             if (this.currentStationNumber == 0) {
-                this.currentStationNumber = 9;
+                this.currentStationNumber = stationsQuantity;
             } else {
                 this.currentStationNumber -= 1;
             }
@@ -90,7 +107,7 @@ public class Radio {
 
     public void changeSoundVolumeUp() {
         if (soundLouder) {
-            if (this.currentSoundVolume == 10) {
+            if (this.currentSoundVolume == 100) {
                 return;
             }
             this.currentSoundVolume += 1;
