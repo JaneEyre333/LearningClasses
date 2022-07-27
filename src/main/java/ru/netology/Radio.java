@@ -1,5 +1,7 @@
 package ru.netology;
 
+import lombok.NoArgsConstructor;
+
 public class Radio {
     private int stationsQuantity = 10;
     private int currentStationNumber;
@@ -124,5 +126,7 @@ public class Radio {
         }
 
     }
+
+
 }
 
